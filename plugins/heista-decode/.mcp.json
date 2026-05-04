@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "heista": {
+      "type": "url",
+      "url": "https://www.heista.co/api/mcp/mcp"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "heista-decode",
+  "description": "Decode any video ad into its structural formula, psychology, and creative intelligence. Generate hooks, scripts, and creator briefs from decoded ads.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Heista",
+    "url": "https://heista.co"
+  },
+  "homepage": "https://heista.co/heista-skills",
+  "repository": "https://github.com/heista-co/claude-code-skills",
+  "license": "MIT"
+}
