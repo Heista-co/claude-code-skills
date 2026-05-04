@@ -1,0 +1,12 @@
+{
+  "name": "heista-hooks",
+  "description": "Generate video ad hooks powered by real decoded ad intelligence. Free — Heista's corpus of winning ad patterns drives your hook generation.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Heista",
+    "url": "https://heista.co"
+  },
+  "homepage": "https://heista.co/heista-skills",
+  "repository": "https://github.com/heista-co/claude-code-skills",
+  "license": "MIT"
+}

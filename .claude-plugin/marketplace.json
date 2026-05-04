@@ -10,6 +10,11 @@
       "name": "heista-decode",
       "source": "./plugins/heista-decode",
       "description": "Decode any video ad into its structural formula, psychology, and creative intelligence."
+    },
+    {
+      "name": "heista-hooks",
+      "source": "./plugins/heista-hooks",
+      "description": "Generate video ad hooks powered by real decoded ad intelligence. Free to use."
     }
   ]
 }
