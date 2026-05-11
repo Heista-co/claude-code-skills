@@ -4,12 +4,17 @@
     "name": "Heista",
     "email": "support@heista.co"
   },
-  "description": "Creative intelligence skills for Claude Code. Decode ads, generate hooks, write scripts.",
+  "description": "Creative intelligence skills for Claude Code. Decode ads, load brand intelligence, generate hooks, write scripts.",
   "plugins": [
     {
       "name": "heista-decode",
       "source": "./plugins/heista-decode",
       "description": "Decode any video ad into its structural formula, psychology, and creative intelligence."
+    },
+    {
+      "name": "heista-powersource",
+      "source": "./plugins/heista-powersource",
+      "description": "Build a complete creative intelligence profile of any brand from a URL, internal documents, or both. Voice, buyer profile, tensions, angles, and proof. The strategic foundation every script and hook is built from."
     },
     {
       "name": "heista-hooks",

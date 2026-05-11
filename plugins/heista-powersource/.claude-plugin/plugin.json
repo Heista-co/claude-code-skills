@@ -1,0 +1,12 @@
+{
+  "name": "heista-powersource",
+  "description": "Build a complete creative intelligence profile of any brand. Pulls voice, buyer profile, behavioral tensions, marketing angles, and proof from a URL, internal documents, or both combined. The strategic foundation every script, hook, and brief is built from.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Heista",
+    "url": "https://heista.co"
+  },
+  "homepage": "https://heista.co/heista-skills",
+  "repository": "https://github.com/Heista-co/claude-code-skills",
+  "license": "MIT"
+}
