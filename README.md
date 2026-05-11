@@ -48,7 +48,7 @@ Full tool reference: [heista.co/docs § MCP](https://heista.co/docs#mcp).
 A Heista account is required for paid skills. Free skills work without one for the corpus reads, but `check_balance` and any paid call need an account.
 
 - Sign up: [heista.co](https://heista.co)
-- Top up: [heista.co/api-console/billing](https://heista.co/api-console/billing) — packs from $10 (500 credits) to $100 (12,500 credits)
+- Top up: [heista.co/api-console/billing](https://heista.co/api-console/billing) — packs from $10 (~100 decodes) to $250 (~2,500 decodes)
 - Manage API keys: [heista.co/api-console/keys](https://heista.co/api-console/keys)
 
 ## Source & support
