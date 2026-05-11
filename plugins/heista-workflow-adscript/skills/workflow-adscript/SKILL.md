@@ -2,13 +2,13 @@
 name: heista-workflow-adscript
 description: Full ad script workflow — decode a competitor's winning ad, extract your brand intelligence, then generate production-quality scripts built from the decoded formula matched to your brand's voice, tensions, and selling points. Chains decode_ad + create_powersource_url + generate_adscript into one flow. Use when the user says "decode this ad and write scripts", "take this competitor ad and write my version", "full script workflow", or wants production scripts from a specific decoded ad with brand intelligence. Costs credits.
 allowed-tools:
-  - mcp__claude_ai_Heista__decode_ad
-  - mcp__claude_ai_Heista__get_decode
-  - mcp__claude_ai_Heista__create_powersource_url
-  - mcp__claude_ai_Heista__get_powersource
-  - mcp__claude_ai_Heista__generate_adscript
-  - mcp__claude_ai_Heista__adformula_intelligence
-  - mcp__claude_ai_Heista__check_balance
+  - mcp__heista__decode_ad
+  - mcp__heista__get_decode
+  - mcp__heista__create_powersource_url
+  - mcp__heista__get_powersource
+  - mcp__heista__generate_adscript
+  - mcp__heista__adformula_intelligence
+  - mcp__heista__check_balance
 ---
 
 # Heista Workflow: Ad Script
@@ -87,8 +87,8 @@ Briefly note what was extracted:
 > **Tensions:** [count] behavioral tensions
 > **Brand voice:** [present/absent]
 
-If POWER mode ran, mention the brand voice synthesis:
-> **Voice:** "[First sentence of tone_of_voice]..."
+If a brand voice was extracted, surface it:
+> **Voice:** "[First sentence of brand voice]..."
 
 ### Step 4: Creative Direction (Quick — Don't Over-Ask)
 
@@ -96,7 +96,7 @@ Before generating, quickly confirm or infer:
 
 1. **How many scripts?** Default 3 if not specified
 2. **Blueprint or remix?** Default blueprint ("their formula, your brand")
-3. **Audience?** Default buyer_profile. Mention available segments if POWER mode ran:
+3. **Audience?** Default buyer_profile. Mention available segments if PowerSource extracted them:
    > "Your PowerSource has 3 audience segments: [names]. Using the buyer profile by default. Want a specific segment?"
 4. **Lock tension?** Only ask if the user seems opinionated. Otherwise auto-rotate
 5. **Lock selling points?** Only ask if they mentioned specific features. Otherwise auto-select
@@ -175,7 +175,7 @@ When the user asks "how much will this cost?" — give a straight answer.
 |---|---|
 | Decode a SPECIFIC competitor ad | Use category formula patterns |
 | Extract YOUR brand's voice + tensions | User provides brand context manually |
-| Production writer agent (highest fidelity) | Claude writes from blueprints |
+| Production-quality scripts (highest fidelity) | Claude writes from blueprints |
 | Costs credits | Free |
 | Best for: "I want MY version of THEIR ad" | Best for: "Write me a script for my brand" |
 

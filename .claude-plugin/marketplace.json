@@ -5,31 +5,58 @@
     "email": "support@heista.co"
   },
   "description": "Creative intelligence skills for Claude Code. Decode ads, load brand intelligence, generate hooks, write scripts.",
+  "homepage": "https://heista.co/heista-skills",
+  "repository": "https://github.com/Heista-co/claude-code-skills",
   "plugins": [
     {
       "name": "heista-decode",
       "source": "./plugins/heista-decode",
-      "description": "Decode any video ad into its structural formula, psychology, and creative intelligence."
+      "version": "1.0.0",
+      "description": "Decode any video ad into its structural formula, psychology, and creative intelligence.",
+      "category": "productivity",
+      "tags": ["creative-intelligence", "ads", "decode", "requires-account"],
+      "author": { "name": "Heista", "email": "support@heista.co" },
+      "homepage": "https://heista.co/heista-api/decoder"
     },
     {
       "name": "heista-powersource",
       "source": "./plugins/heista-powersource",
-      "description": "Build a complete creative intelligence profile of any brand from a URL, internal documents, or both. Voice, buyer profile, tensions, angles, and proof. The strategic foundation every script and hook is built from."
+      "version": "1.0.0",
+      "description": "Build a complete creative intelligence profile of any brand from a URL, internal documents, or both. Voice, buyer profile, tensions, angles, and proof. The strategic foundation every script and hook is built from.",
+      "category": "productivity",
+      "tags": ["creative-intelligence", "brand", "powersource", "requires-account"],
+      "author": { "name": "Heista", "email": "support@heista.co" },
+      "homepage": "https://heista.co/heista-api/powersource"
     },
     {
       "name": "heista-hooks",
       "source": "./plugins/heista-hooks",
-      "description": "Generate video ad hooks powered by real decoded ad intelligence. Free to use."
+      "version": "1.0.0",
+      "description": "Generate video ad hooks powered by real decoded ad intelligence. Free to use.",
+      "category": "productivity",
+      "tags": ["creative-intelligence", "hooks", "ads", "free"],
+      "author": { "name": "Heista", "email": "support@heista.co" },
+      "homepage": "https://heista.co/heista-api/intelligence-hooks"
     },
     {
       "name": "heista-adscript",
       "source": "./plugins/heista-adscript",
-      "description": "Write video ad scripts backed by proven structural formulas from decoded winning ads. Free to use."
+      "version": "1.0.0",
+      "description": "Write video ad scripts backed by proven structural formulas from decoded winning ads. Free to use.",
+      "category": "productivity",
+      "tags": ["creative-intelligence", "scripts", "ads", "free"],
+      "author": { "name": "Heista", "email": "support@heista.co" },
+      "homepage": "https://heista.co/heista-api/intelligence-formulas"
     },
     {
       "name": "heista-workflow-adscript",
       "source": "./plugins/heista-workflow-adscript",
-      "description": "Full ad script workflow: decode competitor ads, extract brand intelligence, generate production scripts. Costs credits."
+      "version": "1.0.0",
+      "description": "Full ad script workflow: decode competitor ads, extract brand intelligence, generate production scripts. Costs credits.",
+      "category": "productivity",
+      "tags": ["creative-intelligence", "workflow", "scripts", "requires-account"],
+      "author": { "name": "Heista", "email": "support@heista.co" },
+      "homepage": "https://heista.co/heista-api/adscript"
     }
   ]
 }

@@ -2,11 +2,11 @@
 name: heista-powersource
 description: Build a complete creative intelligence profile of any brand using Heista's PowerSource tools. Pulls brand voice, buyer profile, behavioral tensions, marketing angles, selling points, proof assets, and narrative direction from a website URL, internal brand documents (PDF, DOCX, briefs, brand guidelines, customer research), or both combined. Use when the user wants to load their brand, decode their brand strategy, extract brand intelligence, build a creative brief from a URL, analyze a competitor's brand, or load brand context before generating scripts and hooks. Triggers on "load my brand", "extract brand intelligence", "what's my brand strategy", "decode this website", "analyze this brand", "build me a brand brief", or when the user pastes a homepage URL or attaches brand documents. This is the brand strategist layer — it produces the strategic foundation every other creative tool plugs into.
 allowed-tools:
-  - mcp__claude_ai_Heista__create_powersource_url
-  - mcp__claude_ai_Heista__create_powersource_docs
-  - mcp__claude_ai_Heista__create_powersource_full
-  - mcp__claude_ai_Heista__get_powersource
-  - mcp__claude_ai_Heista__check_balance
+  - mcp__heista__create_powersource_url
+  - mcp__heista__create_powersource_docs
+  - mcp__heista__create_powersource_full
+  - mcp__heista__get_powersource
+  - mcp__heista__check_balance
 ---
 
 # Heista PowerSource
@@ -28,7 +28,7 @@ Speak like a senior creative strategist who's loaded a thousand brands. Confiden
 - Paste raw JSON. Translate every section into something a strategist would write in a deck
 - Read out every field. Pick the strongest 3-5 tensions, top 3 angles, sharpest 3 selling points. Quality over volume
 - Use these words: leverage, seamless, transform, empower, democratize, solution, platform
-- Show internal scope tags (`_scope: brand`), confidence scores, or pipeline metadata unless asked
+- Show internal field markers, confidence scores, or response metadata unless asked
 - Treat docs-mode and URL-mode as different products. They produce the same shape. Pick the right mode and move on
 - Use em dashes. Periods and commas only
 
@@ -125,7 +125,7 @@ When the user wants to drill into a specific dimension, go deep on that dimensio
 
 - **"Show me the buyer"** → Full buyer profile: archetype, demographic shape, day-in-life, emotional state, primary objection. Translate every field
 - **"What are all the tensions?"** → The full tension list (typically 8-12). For each: name, the gap it captures, when to lean on it. Plain English
-- **"Walk me through the angles"** → Every angle the strategy agents surfaced: name, one-line description, which tension it serves, example opener. Skip raw seed strings
+- **"Walk me through the angles"** → Every angle in the strategy: name, one-line description, which tension it serves, example opener. Skip raw seed strings
 - **"What's the brand voice?"** → The brand_voice tone-of-voice paragraph delivered as-is (it's already written in the brand's register). Then any voice rules, banned phrases, and signature words
 - **"Show me the selling points"** → All product-level selling points in priority order with the page they came from
 - **"What about the offer?"** → Promotional context, has_sale flag, current promotions, urgency signals, pricing references
@@ -183,7 +183,7 @@ This is a free creative direction the user can either ship or feed back into a s
 
 ### Angle Map
 
-When the user asks "what angles can I run?", surface every angle the strategy agents found, grouped by the tension they serve:
+When the user asks "what angles can I run?", surface every angle in the strategy, grouped by the tension they serve:
 
 ```
 ANGLE → TENSION → EXAMPLE OPENER
@@ -229,30 +229,30 @@ A copywriter or creator can read this brief and write in the brand's voice on th
 
 ### Refresh Detection
 
-When a user re-runs a PowerSource on the same domain and gets the cached BRAND-LEVEL sections back:
-- Surface only what changed in the PRODUCT-LEVEL and pulse signals
-- "Same brand foundation. Different selling points on this URL. Here's the new layer."
+When a user re-runs a PowerSource on the same domain and the brand foundation comes back unchanged:
+- Surface only what changed on this specific page
+- "Same brand. Different selling points on this URL. Here's what's new."
 - Don't make them sit through the same brand voice paragraph twice
 
 ## Interpreting the Output
 
-A PowerSource result has these top-level sections. Each carries a `_scope` tag internally — keep that out of user output, but use it to understand where the data came from.
+A PowerSource result has these top-level sections.
 
-### BRAND-LEVEL (cached, same across products on the same site)
+### Brand foundation (consistent across the site)
 
 - `brand_voice` — tone-of-voice paragraph, voice DNA, linguistic style. The voice every script must be written in
 - `brand_story` — founding story, mission, archetype. Use when writing emotional or hero-narrative ads
 - `brand_style` — color palette, design language
 - `brand_assets` — fonts, logo URLs, brand media URLs. Use when generating visuals or briefs
 
-### PRODUCT-LEVEL (fresh per URL — varies by page)
+### Page-specific (varies per URL)
 
 - `identity` — brand name, category, vertical, what they sell
 - `offer` — pricing context, promotions, urgency signals
 - `selling_points` — the strongest claims with the page source
 - `ctas` — exact CTA copy with the page source
 
-### SYNTHESIZED (derived by strategy agents)
+### Strategic synthesis
 
 - `buyer_profile` — archetype, demographic shape, day-in-life, emotional state
 - `tensions` — 8-12 behavioral tensions in the buyer's life
@@ -260,7 +260,7 @@ A PowerSource result has these top-level sections. Each carries a `_scope` tag i
 - `emotional_arcs` — the dramatic range the brand can operate in
 - `narrative` — narrative direction, communication identity, story arc
 
-### SITE-LEVEL pulse signals
+### Site pulse signals
 
 - `promotions` — has_sale, has_seasonal, has_new_drop, has_announcement
 
@@ -300,12 +300,12 @@ This is what makes the Skill feel like working with a strategist, not a retrieva
 | `file_not_found` | "One of those file IDs isn't in your library. Re-upload through the Files API or pass document URLs directly." |
 | `unsupported_file_type` | "Docs mode supports PDF, DOCX, TXT, and MD. That file type isn't supported." |
 | `insufficient-credits` | "You're out of credits. URL mode is 100 credits, Full mode is 200. Top up at heista.co/api-console/billing." |
-| `domain_cached_already` | Surface the cached result as if fresh. Note: "Brand foundation is cached for your org. Pulled it in zero credits." |
+| `domain_cached_already` | Surface the result as if fresh. Note: "Same brand was already scanned for your org. Pulled it instantly, no charge." |
 | Auth failed | "Reconnect Heista in your Claude settings." |
 
 ## Pricing
 
-- `create_powersource_url` — 100 credits. Same-domain re-runs by the same org are free (cached BRAND-LEVEL layer).
+- `create_powersource_url` — 100 credits. Same-domain re-runs by the same org are free.
 - `create_powersource_docs` — 100 credits.
 - `create_powersource_full` — 200 credits. Use when you want the strongest possible signal.
 - `get_powersource` — free.

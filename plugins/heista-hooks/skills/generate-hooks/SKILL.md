@@ -2,8 +2,8 @@
 name: heista-hooks
 description: Generate video ad hooks powered by real decoded ad intelligence from Heista's corpus. Tell it your brand, what you sell, and your audience — it pulls proven hook patterns from 1000+ decoded winning ads, shows you the intelligence, then generates hooks you can shoot today. Free to use. Triggers on "generate hooks", "write hooks", "ad hooks", "hook ideas", "video hooks", or when user wants opening lines for video ads.
 allowed-tools:
-  - mcp__claude_ai_Heista__get_hook_intelligence
-  - mcp__claude_ai_Heista__check_balance
+  - mcp__heista__get_hook_intelligence
+  - mcp__heista__check_balance
 ---
 
 # Heista Hooks

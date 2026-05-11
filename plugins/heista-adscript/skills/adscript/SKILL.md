@@ -2,10 +2,10 @@
 name: heista-adscript
 description: Write video ad scripts backed by proven structural formulas from Heista's decoded ad corpus. Tell it your brand and what you sell — it pulls real formula blueprints from 1000+ decoded winning ads, shows you the structure, then writes scripts you can shoot today. Free to use. Triggers on "write a script", "ad script", "video script", "write an ad", "script for my brand", "ad copy", or when user wants scripts for video ads.
 allowed-tools:
-  - mcp__claude_ai_Heista__adformula_intelligence
-  - mcp__claude_ai_Heista__decoder_intelligence
-  - mcp__claude_ai_Heista__get_hook_intelligence
-  - mcp__claude_ai_Heista__check_balance
+  - mcp__heista__adformula_intelligence
+  - mcp__heista__decoder_intelligence
+  - mcp__heista__get_hook_intelligence
+  - mcp__heista__check_balance
 ---
 
 # Heista Ad Script

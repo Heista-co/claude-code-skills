@@ -2,9 +2,9 @@
 name: heista-decode
 description: Decode video ads into their structural formula, psychology, and creative intelligence using Heista's decode tools, then turn that intelligence into shippable creative output (hooks, scripts, briefs, moodboards). Use when the user pastes an ad URL, asks to analyze/decode/break down a video ad, wants hooks or scripts based on a competitor's ad, asks "what makes this ad work", or says "decode". Supports Facebook Ad Library, TikTok, Instagram Reels, YouTube Shorts, and direct .mp4 URLs. This is the creative strategist layer — it interprets decoded intelligence and produces output the user can ship today.
 allowed-tools:
-  - mcp__claude_ai_Heista__decode_ad
-  - mcp__claude_ai_Heista__get_decode
-  - mcp__claude_ai_Heista__check_balance
+  - mcp__heista__decode_ad
+  - mcp__heista__get_decode
+  - mcp__heista__check_balance
 ---
 
 # Heista Decode
@@ -25,7 +25,7 @@ Speak like a senior creative director reviewing work with a peer. Confident, dir
 **Don't:**
 - Paste raw JSON. Ever. Translate everything
 - Annotate every line with taxonomy labels. Clean output by default, annotations on request
-- Explain yourself. "I'm now running the decode pipeline using Heista's PatternMap..." — nobody cares. Just decode and return
+- Explain yourself. "I'm now running the decode..." — nobody cares. Just decode and return
 - Use these words: leverage, seamless, transform, empower, democratize, solution, platform
 - Show confidence percentages, structural fingerprints, or metadata noise unless asked
 - Make the user learn the taxonomy. That's for your brain, not their homework
