@@ -15,6 +15,16 @@
       "name": "heista-hooks",
       "source": "./plugins/heista-hooks",
       "description": "Generate video ad hooks powered by real decoded ad intelligence. Free to use."
+    },
+    {
+      "name": "heista-adscript",
+      "source": "./plugins/heista-adscript",
+      "description": "Write video ad scripts backed by proven structural formulas from decoded winning ads. Free to use."
+    },
+    {
+      "name": "heista-workflow-adscript",
+      "source": "./plugins/heista-workflow-adscript",
+      "description": "Full ad script workflow: decode competitor ads, extract brand intelligence, generate production scripts. Costs credits."
     }
   ]
 }

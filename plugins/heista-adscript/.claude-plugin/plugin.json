@@ -1,6 +1,6 @@
 {
-  "name": "heista-decode",
-  "description": "Decode any video ad into its structural formula, psychology, and creative intelligence. Generate hooks, scripts, and creator briefs from decoded ads.",
+  "name": "heista-adscript",
+  "description": "Write video ad scripts powered by proven structural formulas from decoded winning ads. Free — Heista's formula corpus drives your script generation.",
   "version": "1.0.0",
   "author": {
     "name": "Heista",

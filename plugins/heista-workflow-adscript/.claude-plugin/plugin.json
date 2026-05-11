@@ -1,0 +1,12 @@
+{
+  "name": "heista-workflow-adscript",
+  "description": "Full ad script workflow: decode a competitor ad, extract your brand intelligence, generate production-quality scripts. Chains decode + PowerSource + script generation in one command.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Heista",
+    "url": "https://heista.co"
+  },
+  "homepage": "https://heista.co/heista-skills",
+  "repository": "https://github.com/Heista-co/claude-code-skills",
+  "license": "MIT"
+}
