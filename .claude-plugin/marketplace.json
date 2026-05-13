@@ -5,8 +5,6 @@
     "email": "support@heista.co"
   },
   "description": "Creative intelligence skills for Claude Code. Decode ads, load brand intelligence, generate hooks, write scripts.",
-  "homepage": "https://heista.co/heista-skills",
-  "repository": "https://github.com/Heista-co/claude-code-skills",
   "plugins": [
     {
       "name": "heista-decode",
